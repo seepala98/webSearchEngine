@@ -82,52 +82,12 @@ public class Crawler {
         }
     }
 
-//    //method to write the url to the file
-//    public static void writeToFile(String folderName, String fileName, String url){
-//        try {
-//            FileWriter fileWriter = new FileWriter(folderName + "/" + fileName + ".txt");
-//            fileWriter.write(url);
-//            fileWriter.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    //method to write the url to the file
-//    public static void writeToFile(String folderName, String fileName, HashSet<String> urls){
-//        try {
-//            FileWriter fileWriter = new FileWriter(folderName + "/" + fileName + ".txt");
-//            for(String url : urls){
-//                fileWriter.write(url + "\n");
-//            }
-//            fileWriter.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//}
     //download html content and store it in the folder
     public static void downloadHtml(String html) throws IOException {
         Document doc = Jsoup.parse(html);
         String title = doc.title();
         writeToFile("htmlFiles", title, html);
     }
-//        //create a new file using title
-//        File file = new File("htmlFiles/" + title + ".html");
-////        file.createNewFile();
-//        //create a file writer
-//        FileWriter fw;
-//        try {
-//            //create a file writer
-//            fw = new FileWriter(file);
-//            //write the html content to the file
-//            fw.write(html);
-//            //close the file writer
-//            fw.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     private static boolean shouldCrawlUrl(String nextUrl) {
         if (nextUrl.startsWith("javascript:")) {
@@ -146,6 +106,14 @@ public class Crawler {
             }
         }
         return true;
+    }
+
+    //method to check if the url is correct
+    public static boolean isUrlCorrect(String url){
+        if(url.startsWith("http://") || url.startsWith("https://")){
+            return true;
+        }
+        return false;
     }
 
     public static void main(String[] args) throws IOException {
