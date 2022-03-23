@@ -118,9 +118,18 @@ public class Crawler {
 
     public static void main(String[] args) throws IOException {
         //create a set to store the unique urls
-        HashSet<String> uniqueUrls;
+        HashSet<String> uniqueUrls = null;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the url to crawl");
+        String user_url = scanner.next();
+        if (isUrlCorrect(user_url)) {
+            uniqueUrls = crawler(user_url, 3);
+        }
+        else {
+            System.out.println("Invalid url");
+        }
         //call the crawler method to get the unique urls
-        uniqueUrls = crawler("https://www.w3schools.com/", 3);
+//        uniqueUrls = crawler(user_url, 3);
         removeFolder("htmlFiles");
         createFolder("htmlFiles");
         for (String url : uniqueUrls) {
