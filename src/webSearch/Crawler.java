@@ -3,6 +3,8 @@ package webSearch;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.*;
 
 import  org.jsoup.Jsoup;
@@ -12,7 +14,7 @@ import org.jsoup.select.Elements;
 
 public class Crawler {
     //crawler method to take inputs as url, depth and return the unique urls
-    public static HashSet<String> crawler(String url, int depth) {
+    public static HashSet<String> crawler(String url, int depth) throws IOException {
         HashSet<String> uniqueUrls = new HashSet<>();
         HashSet<String> urls = new HashSet<>();
         urls.add(url);
@@ -74,7 +76,7 @@ public class Crawler {
     //method to write the html content to the file
     public static void writeToFile(String folderName, String fileName, String html){
         try {
-            FileWriter fileWriter = new FileWriter(folderName + "/" + fileName + ".html");
+            FileWriter fileWriter = new FileWriter(folderName + "/" + fileName.replace(" ", "") + ".html");
             fileWriter.write(html);
             fileWriter.close();
         } catch (IOException e) {
@@ -89,7 +91,7 @@ public class Crawler {
         writeToFile("htmlFiles", title, html);
     }
 
-    private static boolean shouldCrawlUrl(String nextUrl) {
+    private static boolean shouldCrawlUrl(String nextUrl, String baseUrl) {
         if (nextUrl.startsWith("javascript:")) {
             return false;
         }
@@ -105,7 +107,23 @@ public class Crawler {
                 return false;
             }
         }
+        //condition to check if the url is of specific domain
+        if (! nextUrl.contains(baseUrl)) {
+            return false;
+        }
         return true;
+    }
+
+    //method to get the domain name of the url
+    public static String getDomainName(String url) {
+        String domainName = "";
+        try {
+            URI uri = new URI(url);
+            domainName = uri.getHost();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        return domainName;
     }
 
     //method to check if the url is correct
@@ -122,21 +140,23 @@ public class Crawler {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the url to crawl");
         String user_url = scanner.next();
+        String domainName = getDomainName(user_url);
+        System.out.println(" the domain name is " + domainName);
         if (isUrlCorrect(user_url)) {
             uniqueUrls = crawler(user_url, 3);
-        }
-        else {
+        } else {
             System.out.println("Invalid url");
         }
-        //call the crawler method to get the unique urls
-//        uniqueUrls = crawler(user_url, 3);
         removeFolder("htmlFiles");
         createFolder("htmlFiles");
+        assert uniqueUrls != null;
+        int count = 0;
         for (String url : uniqueUrls) {
-            if (shouldCrawlUrl(url)) {
+            if (shouldCrawlUrl(url, domainName) && count < 300) {
                 System.out.println(url);
                 String html = getHtml(url);
                 downloadHtml(html);
+                count++;
             }
         }
         //print the unique urls
