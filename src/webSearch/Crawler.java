@@ -7,9 +7,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
 
-import  org.jsoup.Jsoup;
-import  org.jsoup.nodes.Document;
-import  org.jsoup.nodes.Element;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class Crawler {
