@@ -8,31 +8,28 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 
-
-public class Task3 {
+public class HtmltoText {
 
 	public static void main(String[] args) {
-		
-		long start1, end1;
-		
+				
 		String s="";
 		
 		//--------------------HTML to Text---------------------\\
 		
-		start1 = System.nanoTime();
-        System.out.println("Start time "+start1);
 
 		File file = new File("/Users/architsehgal/Desktop/University/ACC/Final Project/webSearchEngine/htmlFiles/");
-//		File file = new File("/webSearchEngine/htmlFiles");
 
-		System.out.println("Files: "+file);
+		System.out.println("Taking Files from : "+file);
 
 		String listOfFiles[] = file.list();
-        System.out.println("Web Page: "+listOfFiles);
+        System.out.println("\n****** Converting HTML to Text ********");
+		System.out.println();
+		System.out.println();
+
 		
 		for(int i=0; i<listOfFiles.length; i++) {
 			
-	         System.out.println("Web Page: "+listOfFiles[i]);
+	         System.out.println("HTML Page: "+listOfFiles[i]);
 	         In in = new In("/Users/architsehgal/Desktop/University/ACC/Final Project/webSearchEngine/htmlFiles/"+listOfFiles[i]);
 	 		
 	         
@@ -78,10 +75,7 @@ public class Task3 {
 	      }
 		System.out.println();
 		System.out.println();
-		System.out.println();
-		 end1 = System.nanoTime(); 
-	       
-	       System.out.println( "Total Time to execute: " + ( end1 - start1 ) );
+		System.out.println("**** Converted all HTML files to Text ******* ");	       
 		
 		
 	}
