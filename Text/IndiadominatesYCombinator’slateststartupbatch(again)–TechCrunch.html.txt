@@ -1,0 +1,575 @@
+
+
+
+
+!function(){var n,o,i,e="renderMode=ie11";n=window.navigator.userAgent,o=n.indexOf("MSIE "),i=n.indexOf("Trident/"),(o>0||i>0)&&-1===window.location.href.indexOf(e)&&(window.location=window.location.href+("?"===document.location.search[0]?"&":"?")+e)}();
+
+
+
+
+
+
+
+
+if ( ! window.isSSR ) {
+!function(){var e,t,n,i,r={passive:!0,capture:!0},a=new Date,o=function(){i=[],t=-1,e=null,f(addEventListener);},c=function(i,r){e||(e=r,t=i,n=new Date,f(removeEventListener),u());},u=function(){if(t>=0&&t1e12?new Date:performance.now())-e.timeStamp;"pointerdown"==e.type?function(e,t){var n=function(){c(e,t),a();},i=function(){a();},a=function(){removeEventListener("pointerup",n,r),removeEventListener("pointercancel",i,r);};addEventListener("pointerup",n,r),addEventListener("pointercancel",i,r);}(t,e):c(t,e);}},f=function(e){["mousedown","keydown","touchstart","pointerdown"].forEach((function(t){return e(t,s,r)}));},p="hidden"===document.visibilityState?0:1/0;addEventListener("visibilitychange",(function e(t){"hidden"===document.visibilityState&&(p=t.timeStamp,removeEventListener("visibilitychange",e,!0));}),!0);o(),self.webVitals={firstInputPolyfill:function(e){i.push(e),u();},resetFirstInputPolyfill:o,get firstHiddenTime(){return p}};}();
+}
+
+
+
+!function(){var n="//"+window.location.hostname+"/wp-json/tc/v1/users/check_login";fetch(n,{method:"POST",headers:{"Content-Type":"application/json; charset=utf-8"},credentials:"include"}).then(function(n){window.tc_profile={resp:n}})}();
+
+India dominates Y Combinator’s latest startup batch (again) – TechCrunch
+
+
+
+
+
+
+
+
+
+
+
+
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/techcrunch.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r
+
+
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 0.07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+
+
+
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{"@context":"http:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/techcrunch.com\/2022\/03\/29\/y-combinator-india-winter-2022\/"},"headline":"India dominates Y Combinator\u2019s latest startup batch (again)","url":"https:\/\/techcrunch.com\/2022\/03\/29\/y-combinator-india-winter-2022\/","thumbnailUrl":"https:\/\/techcrunch.com\/wp-content\/uploads\/2022\/03\/YC-DD-2022-india.jpg?w=150","image":{"@type":"ImageObject","url":"https:\/\/techcrunch.com\/wp-content\/uploads\/2022\/03\/YC-DD-2022-india.jpg?w=150"},"dateCreated":"2022-03-29T17:58:42Z","datePublished":"2022-03-29T17:58:42Z","dateModified":"2022-03-29T20:59:04Z","articleSection":"post","author":[{"@type":"Person","name":"Natasha Mascarenhas"},{"@type":"Person","name":"Kate Park"}],"creator":["Natasha Mascarenhas","Kate Park"],"publisher":{"@type":"Organization","name":"TechCrunch","logo":{"@type":"imageObject","url":"https:\/\/techcrunch.com\/wp-content\/themes\/techcrunch-2017\/images\/logo-json-ld.png","width":"600","height":"60"}},"keywords":["@post-id:2290542","tc","early stage","startup","y combinator","y combinator demo day","yc demo day winter 2022"]}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.JAC_CONFIG = {
+client: {
+onReady: function() {
+document.dispatchEvent( new Event( 'JACReady' ) );
+},
+}
+};
+
+
+
+
+
+
+
+
+
+
+India dominates Y Combinator’s latest startup batch (again)
+All focus is on fintech in this season's cohort
+
+
+Natasha Mascarenhas Kate Park 3 days
+
+
+
+
+
+
+
+Yet again, India is the most represented country, outside of the United States, within the latest Y Combinator accelerator batch: the Winter 2022 cohort sports 32 startups hailing from Gurugram, Bengaluru, Delhi, New Delhi, Hyderabad, Mumbai and Chennai. For what it’s worth, more than 191 companies in India have been funded through the Y Combinator accelerator, with nearly half — half! — of those companies accepted in the last 12 months.
+This batch’s companies, as we’ll discuss below, plan to tackle a diverse range of challenges within tech, but appear concentrated mostly within the financial services sector. Think ‘buy now, pay later’ pitches, savings-focused neobanks and, of course, bitcoin bets. It’s a contrast from prior showings, in which most of India’s YC startups fell into the B2B services category, but as we’ve seen, fintech is on fire in terms of valuations and investor appetite – even despite a broader market correction.
+Other trends of note include a smattering of companies from Accel Atoms, a pre-seed program for early-stage founders in India, as well as many, many IIT graduates.
+
+Here’s a list of all W22 startups:
+TradeX
+Founded: 2021 in Gurugram, Haryana, India
+Team:
+
+Divij Goyal, the former founder of CityMall – which is a half a billion dollar social commerce business – and a poker player.
+Indrajeet Roy, an industrial engineer graduate from IIT Delhi and former founder of Hoi Foods, which they say is India’s fifth largest cloud kitchen company
+Ankit Shrivastava, an app developer, part-time trader in the Indian stock market, and a techie who has worked across PwC and JPMC in the past.
+
+What they’re building: A kind of futures market where people can trade money while betting on whether or not an outcome will happen, from a movie launch to who the next president will be. There are more serious future events to bet on, too, such as climate change, inflation and omicron cases.
+
+Key quote: “Allowing people to trade on what they know rather than studying company financials or worrying about market conditions. We are making opinions investable,” the company wrote on Y Combinator’s blog.
+TC Quick Take: We know that alternative asset investing is gaining momentum, thanks to collectibles and NFTs. TradeX is betting that futures markets — which have been tried in the past but failed to generate enough interest from investors to succeed — will find an audience, too. It might have found inspiration in Kalshi, a U.S. startup that is similarly hoping to entice a new generation of traders to bet on all kinds of possible outcomes (and that has itself raised money from Sequoia Capital, Henry Kravis, and Charles Schwab). TradeX has already raised $1 million in seed funding, per Entrackr.
+GoSats
+Founded: 2020 in Bengaluru, India
+Team:
+
+Roshni Aslam is a former research and investment analyst turned co-founder.
+Mohammed Roshan is an early bitcoin adopter who has held executive positions at a number of Indian crypto companies, including the title of founder at SaffronCoin.
+
+What they’re building: The startup combines the idea of cash-back rewards with crypto.
+Key quote: “We help people accumulate free bitcoin as cash back and rewards every time they shop in India,” the company wrote on Y Combinator’s blog.
+Our thoughts: The startup previously went through Atoms, Accel’s pre-seed funding program and that claims GoSats already has an 85,000 person community with 1,000 new users coming every day. By avoiding going the exchange route, and instead sitting on top of how people use and transact in both coins and cash, GoSats could be a ripe acquisition target – or a platform that brings a services business to crypto.
+
+
+
+Image Credits: PixelChoice (opens in a new window) / Getty Images
+
+
+Better Opinions
+Founded: 2021 in Gurugram, India.
+Team:
+
+Soumyajit Das, co-founder and CTO of Better Opinions, previously worked at some of the biggest international startups, including Gojek, PayTm, Meesho and Decathlon. They previously built a social startup for donating household items for charity.
+Samay Jain also worked at Gojek as a product lead, and before that was an IIT Kharagpur graduate. The now co-founder says he has been an active trader for over three years.
+
+What they’re building: A platform for users to trade opinions and win money if they’re right. The prediction platform lets folks bet on everyday topics, such as COVID-19 case rates or the winner of tonight’s cricket game.
+Key quote: “When we start allowing trading in categories such as cricket, politics and entertainment, not only do we make trading more relatable, but we also help improve their financial literacy,” the company wrote on Y Combinator’s blog.
+Our thoughts: Are we missing something? Better Opinions feels like a direct competitor to TradeX.
+OurEye.ai
+Founded: 2020 in Bengaluru, India
+Team:
+
+Miran Junaidi, a recent UC Berkeley graduate with teaching and research experience in artificial intelligence, is a co-founder of the startup.
+Sourav Sanyal, also a co-founder of OurEye.ai, previously studied computer science and began an entertainment company for teenagers.
+
+What they’re building: A way for brick-and-mortar shops to audit videos for standard operating procedures. The company uses artificial intelligence through CCTV cameras to monitor quality and make faster business decisions.
+Our thoughts: We like the idea of your neighborhood bodega catching up with real-time alerts when it comes to walk-ins, customers, and, heck, floor mopping compliance. It’s just, ultimately, we’d love to see the remote auditing company boast more privacy and user security shout outs on their website.
+Fello
+Founded: 2021 in Bengaluru, India
+Team:
+
+CTO and Co-founder Shourya Lala is a computer science engineer and app developer who previously built financial tools for BlackRock.
+Manish Maryada, founder and CEO of Fello, spent time scaling early-stage fintech startups before launching one of his own. He focuses on product management, growth, operations and strategy.
+
+What they’re building: Already having raised $1 million in seed backing, Fello is a gaming and finance application that helps India’s Gen Z and young millennials learn how to save money. Users can save and invest in financial assets, and also win money if they win games.
+Key quote: “Just within a short span of 12 weeks of launch, we onboarded 250,000 users with 92% of them being referred users, 88% of them being first-time investors who are spending over 12 minutes on an average per day on the app saving and playing games together!” the company wrote on the Y combinator blog.
+Our thoughts: Personal finance clearly matters internationally, however savings with a twist isn’t quite a new pitch. Fello needs a big differentiator to win sticky traction amid a competitive landscape, whether that’s an accessible user experience or a smart way to pitch its vision.
+Telematica
+Founded: 2021 in Bengaluru, India
+Team:
+
+CEO Abhishek Jain previously founded EdMad, a bootcamp for software engineering interviews, and worked at Adobe.
+Aditya Ketkar, CTO at Telematica, held the same role at Jain’s previous company EdMad and worked at Microsoft and Amazon.
+
+What they’re building: Self-described as a “Plaid for electric vehicles,” Telematica is building an API tool to bring the cloud to the burgeoning automotive subscription industry. Companies, using Telematica, can access the telematics, battery, and other mobility data of cars and control EV charging with one API.
+Key quote: “The thing that fascinates us is that virtually 100% of them are connected to the cloud, which captures and stores telematics, battery, and other mobility data. Unfortunately, there is no easy way for companies to interact with them as there is no user-friendly API or developer portal provided by any brand. For all of these vehicles, we create a single, standardized API,” the company wrote on Y Combinator’s blog.
+Our thoughts: The company claims that India’s electric vehicle market is growing, estimating that more than 40% of new car sales are expected to be electric by 2030. If this is the case, the early bet on the API that makes those cars work and can address their maintenance and fuel needs, could certainly be a big opportunity.
+Material Depot
+Founded: 2021 in Bengaluru, India
+Team:
+
+Manish Reddy, Material Depot’s co-founder, is a former BCG consultant joined by Sarthak Agrawal.
+
+What they’re building: An online index where consumers can discover, organize, and order materials to enhance interior design efforts. The platform is made for construction and creative professionals. Since the company’s launch in January, per the co-founder, more than 5,000 architects and designers have joined the platform.
+Key quote: “When there is so much data, it’s extremely important to ensure the discovery itself doesn’t become a burden itself. Material Depot makes it easy to let go of all the catalogues and phone numbers in your directory and look up your favorite materials (with their detailed specifications) that are just a click away,” the company’s website states.
+Our thoughts: Material Depot sounds similar to services offered by Houzz, which has struggled to monetize its home renovation service in the past. However, Material Depot’s focus on the enterprise instead of the consumer, and its scale of ambition, is noteworthy. The company wants to eventually focus on making the supply chain process more efficient, a need with a lot of monetary opportunity and clear demand.
+SaveIN
+Founded: 2020 in New Delhi, India
+Team:
+
+Co-founder Jitin Bhasin previously launched Rupeeredee, a fintech lending company that he claims delivered millions in revenue along with profitability. The entrepreneur has 14 years of experience across banking, finance, insurance and consulting.
+Co-founder Gaurav Luthra has also spent time launching and building other companies prior to this one, including What’s Up Life and Genie Agro Foods. This appears to be his first foray into the specific world of fintech and neobanks.
+Former EY and Deutsche Bank manager Anurag Varma is the third co-founder of SaveIN. Varma has spent years around the world advising local and global banks on business strategy as well as large scale front-to-back digital and process transformation engagements, his LinkedIn states.
+
+What they’re building: A healthcare company focused on affordability. The startup wants to give more consumers the “buy now, pay later” option when it comes to healthcare bills and other big ticket expenses.
+Key quote: “80% Indians have no health insurance and 50% Indians are unable to pay for private healthcare,” the company wrote on Y Combinator’s blog. “We are targeting 100 [million] urban Indians who undertake on an average 1 healthcare procedure per year costing $200. This is a $20B dollar market opportunity.”
+Our thoughts: Within the United States, there’ve been many swings at repayment services over the years, especially in health care. It makes sense: the bills are confusing, antiquated and often inaccessible based on how expensive a simple service can be. SaveIN wants to bring that model to India, which has its own challenges around billing and repayment. The big focus for SaveIN should be to gain provider trust as it seeks to optimize decades-long inefficiencies.
+AntWalk
+Founded: 2019 in Bengaluru, India.
+Team:
+
+Before trying to disrupt productivity, co-founder Sriramkumar Sundararaman spent more than a decade working for engineering, IT service, telecom and BFSI clients including Jio,
+Joybroto Ganguly, also a co-founder of the company, is a former McKinsey manager and edtech talent upstart founder.
+
+What they’re building: AntWalk is an employee up-skilling platform for enterprises. The company helps employees develop their skill sets and gain new experience across roles including sales, customer success, general management and product.
+Key quote: “An up-skilling platform that empowers teams with continuous learning tracks to equip them with the right skills at the right time,” the company said on Y Combinator’s blog.
+Our thoughts: Finally, an edtech company! As with any up-skilling platform, AntWalk’s success is only as powerful as its outcomes, and it’s unclear how the business tracks the impact of its courses. Elevating productivity levels and enhancing leadership qualities are strong pitches, and the company is smartly using a mix of live and asynchronous cohort-based learning to scale those teachings. We’re most interested in its claim of 1:1 interactions, meaning that employees may be given access to mentors and experts during certain times of the week. That — if scaled — could make for a real difference in efficacy.
+Legistify
+Founded: 2016 in Gurugram, India.
+Team:
+
+CEO Akshat Singhal has been working for the company for over six years. Before that, though, they had experience dealing with another complex industry: restaurants, and the evergreen challenges of booking tables online. Singhal has also worked in marketing, sales and education.
+Pratik Mohapatra, the co-founder and business development lead of Legistify, helps manage litigation portfolios for Indian corporations.
+
+What they’re building: One of the oldest startups in this batch’s India cohort, the 50-person software company wants to make it easier for companies to handle small legal disputes. Per Legistify’s website, the company has 7,000 registered lawyers, 10,000 covered courts, and has handled over 100,000 cases.
+Key quote: “These companies have billions of dollars stuck in millions of such disputes that could easily be tracked and settled through our software,” the company stated on Y Combinator’s blog.
+Our thoughts: Legal tech startups have long tried to bring order to a fragmented industry, so Legistify’s pitch isn’t too hard to understand. After all, every startup doesn’t need the same level of input and white-glove legal service (one might simply be incorporating a company, while another is filing a lawsuit, for example). We’d to see how Legistify monetizes its service, since flexibility for lawyers – and the rise of virtual practices – could create some competitive tensions.
+
+
+
+Image: Bryce Durbin / TechCrunch
+
+
+Blitzllama
+Founded: 2021 in Bengaluru, India.
+Team:
+
+Co-founder Joel John Koshy has spent time as the head of product on an influencer e-commerce platform, and as the founder of a charity fundraising platform.
+Also a serial entrepreneur – who has spent time at Zynga and IIT Bombay – Rahul Mallapur cares about product life cycles, regardless of if they’re in games, social networks, or nonprofits.
+Bently Nixon, co-founder and CTO at Blitzllama, has built a number of startups in education, publishing, food and other sectors.
+
+What they’re building: A better way for product teams to collect feedback from users. Blitzllama is building a SDK integration that can let teams ask questions throughout a product experience, and then tailor products accordingly. The company boasts a 32% average response rate from users, and tracks over 200,000 monthly responses.
+Key quote: “With only a simple SDK integration, teams can ask questions to their users within product journeys and get highly contextual answers in minutes. This empowers teams to ship products that address users’ real problems,” the company wrote on Y Combinator’s blog.
+Our thoughts: The no-code tool is a different, perhaps more direct take on community-first building. Right now, the service’s goal does feel simple, but can be tailored to fit client UI and user language preferences. It also provides one platform for companies to gain user research, instead of stringing together a bunch of different tools. Long term, Blitzllama will need to prove how it can be more proactive or tailored in gaining feedback.
+PayCrunch
+Founded: 2020 in Bengaluru, India.
+Team:
+
+Aman Bhayana spent years studying and working in computer and information systems, before catching the entrepreneurship bug and founding PayCrunch.
+
+What they’re building: A UPI-based payments service that provides a pay later option to college students. The company says it uses alternative credit scoring models to get credit to a wider audience.
+Key quote: “More than 150 million people in India are not able to access formal credits in India either because of lack of financial data or low credit scores,” the company said on Y Combinator’s blog. “We use alternative credit scoring models to provide a Pay Later option on UPI to a wider audience.”
+Our thoughts: Micro loan lending is a common way that we see accessibility and fintech companies overlap. In PayCrunch’s case, it is relying on a unified payments interface, a system that can bring multiple bank accounts, fund routes and payments into one app. It claims it’s the first company to bring this technology to students in India (which we can’t verify) but again, it’s easy to see a massive potential customer base with this one.
+Requestly
+Founded: 2021 in New Delhi, India.
+Team:
+
+CEO and co-founder Sachin Jain has spent over a decade working with companies including Google, Adobe and Grofers. The avid hackathon attendee actually stumbled into the idea for Requestly when working on a side project – and of course, the idea eventually became the startup that was accepted into YC.
+Also an avid builder, Sagar Soni has launched web apps on web, mobile and desktop and worked at more than four startups. Soni, now co-founder and CTO of Requestly, founder, also founded two companies, casually.
+
+What they’re building: A way to record and modify APIs without developers needing to touch the back-end. It is available as a browser extension and a desktop app, and claims it is already in production with over 40,000 developers across over 500 organizations.
+Key quote: “As an Uber engineer, I’d like to test what happens when driver allotment API fails, is there an automatic retry or do we ask the user to retry, or does the app crash,” the company said on Y Combinator’s blog post.
+Our thoughts: API startups have exploded (and thus fragmented) over the past few years. Requestly is smart to try to bring some sort of unification, and ease, to managing those different tools from a higher level.
+Kaagaz
+Founded: 2019 in New Delhi, India
+Team:
+
+Back-end developer turned co-founder, Tamanjit Bindra has built a bunch of businesses, including one that wants to help people have happier homes. He says he loves B2C and scale, even if that’s where “everything breaks.”
+Snehanshu Gandhi is a serial entrepreneur who graduated from IIT Bombay and co-founded a productivity tool before co-founding Kaagaz.
+This also isn’t Gaurav Shrishrimal’s first time hearing the word entrepreneur: the repeat founder now leads growth and marketing at Kaagaz.
+
+What they’re building: A suite of services for mobile-first businesses, specifically focused on managing documents via smartphones. The company says it has 3 million monthly active users over the last 18 months and grows that number at 10% per month. It has 2,000 paying customers to date.
+Key quote: “With over 200M such businesses in India, at $15/year subscription price, this a $3B opportunity in India & much larger globally,” the company wrote on Y Combinator’s blog.
+Our thoughts: Document scanning and cloud storage feels like a niche solution, so it will be interesting see how Kaagaz expands from here. A strength, presumably, is definitely ease of use, given that you can modify documents from your phone.
+Edustack
+Founded: 2021 in Hyderabad, India.
+Team:
+
+Vamsee Koneru previously bootstrapped, built and sold a revenue-generating company in the education system.
+Prudhvi Raj has helped build a number of tech startups, including Zylotech and QuantumGraph, with a product scale mindset.
+
+What they’re building: An operating system for Indian classrooms. Edustack helps teachers assign digitized worksheets, and also send reminders, evaluate, and track engagement of those assignments. It’s free for teachers to use, and sells its platform – which includes customized worksheets and a consultant – to schools.
+Key quote: “Edustack saves 1000’s of hours for teachers by helping them to assign digitized worksheets, send reminders, automate evaluation and instantaneously generate analytics. Digital worksheets are our wedge,” the company wrote on Y Combinator’s blog.
+Our thoughts: Interactive worksheets can’t be where Edustack stops — after all, stack is in its name. We’re interested in seeing how Edustack builds more proactive and student-centered services into its platform, which smartly wants to digitize the antiquated paper-and-pen style school day. Testing and tutoring would be easy pivots, but, heck, surprise us!
+Tingo
+Founded: 2021 in Gurugram, India.
+Team:
+
+Co-founder Sandilya Miduthuri was a former software engineer at Microsoft, Flipkart and Qualcomm and a student from IIT-Hyderabad.
+Chalam PVS, CEO and co-founder of Tingo, led data science and machine learning at Snapdeal, Fareportal and was also an IIT graduate. Both are highly technical, startup-minded entrepreneurs.
+
+What they’re building: Self-described as a “next generation social dialer app,” Tingo lets people set video ringtones for friends and family. While that may sound niche, its vision is much broader (and expands beyond India). Tingo wants to give users a whole new caller experience and app to use to connect with their close friends
+Key quote: “Every day over 40K people use Tingo to set video ringtones for their friends and family. We are growing at 17% weekly and [have] handled 25M+ phone calls through the app in the last 2 month,” the company wrote on Y Combinator’s blog.
+Our thoughts: The moonshot of the company is that it can convince India, and eventually the world, to use a new app when trying to get in touch with friends. It’s a social media play built atop short-form video, a form factor that we’ve already seen proven out with the rise of TikTok (which, obviously, continues to be a dominant force and could prove hard to topple).
+
+
+
+Image Credits: Bryce Durbin
+
+
+InsureMyTeam
+Founded: 2021 in Mumbai, India
+Team size: 11
+Founders:
+
+Kunal Popat is co-founder of InsureMyTeam. His previous 15 years of working in the insurance industry and his passion of technology motivated Popat and his founder to start InsureMyTeam.
+Rachit Puri has 11 years of experience building health tech and fintech products at PayU and Paytm before co-founding InsureMyTeam.
+
+What they’re building: An employee healthcare platform for companies in India enables employees to access unlimited health consultation and traditional hospital expenses.
+Key quote: “Employers provide health insurance, but it is insufficient for most, we also offer an easy way for employees to expand their coverage,” the company wrote on Y Combinator’s blog.
+Our thoughts: The Covid pandemic has spurred the need for greater access to a comprehensive healthcare benefit than only traditional hospital expenses. InsureMyTeam says it posted $16,000 in revenue and grew at 38% month-over-month over the past 5 months. The founders’ experience in insurance, healthcare, and fintech sectors could prove helpful to operate the insurtech startup.
+SALT
+Founded: 2020 in Bengaluru, India
+Team size: 14
+Founders:
+
+Udita Pal, an early team member of Opentalk, Tapchief and Manch, worked with more than 35 startups across the global as a consultant
+Ankit Parasher, an IIT Kharagpur graduate and a former co-founder of logistics platform LetsTransport, founded SALT.
+
+What they’re building: A platform that provides cross-border payments and compliance for small and medium-size businesses. The company offers banking, document management and workflow automation to companies that handle international transactions. SALT has raised a $500,000 seed round last October, as per Times of India.
+Key quote: “SALT is a neo banking solution stitched together to ease payments and documentation which comes with business banking by moving it to a digital-first and automated end to end platform,” the company wrote on Y Combinator’s blog.
+Our thoughts: As India’s exports hit the $400 billion mark for the first time for fiscal year of 2022, more robust cross-border banking and compliance service providers for businesses will be needed. SALT could be one of the companies that make the international transaction easier.
+RecordBook
+Founded: 2021 in Bengaluru, India
+Team size: 10
+Founders:
+
+RecordBook CEO Abhishek Choudhary, an IIT Kanpur graduate and former founder of Foodmonk, says he’s passionate about SaaS and the marketplace. Choudhary co-founded RecordBook last year.
+CTO and co-founder Robbin Singh previously worked as a tech lead at India-based startup Be U Salons and founded social travel platform Otraveli, which helps travelers discover new points of interest.
+
+What they’re building: RecordBook, a mobile and SaaS-based application, enables small and medium corporations to digitize all business data and workflows.
+Key quote: “RecordBook is one stop solution to manage all business data, workflows and teams for small and medium businesses on their mobile devices and in their local languages,” the company wrote on Y Combinator’s blog.
+BharatX
+Founded: 2020 in Bengaluru, India
+Team size: 6
+Founders:
+
+Mehul Jindal is co-founder and CEO at BharatX. Four undergraduate students at the National Institute of Technology Tiruchy founded BharaX.
+Shyam Murugan is co-founder of BharatX.
+Eeshan Sharma is co-founder and COO of BharatX.
+Siddharth Venu, co-founder of BharatX, says he loves building tech and watching anime.
+
+What they’re building: The company enables low-income persons in India to get credit via consumer-facing apps. BharatX has raised a $250,000 pre-seed round last year, per mint.
+Key quote: “We operate our Buy Now Pay Later (BNPL) in a white-labelled manner on other apps and websites,” the company said on Y Combinator’s blog.
+Our thoughts: This fintech startup wants to capture a niche market the banks couldn’t provide– access to credit to every lower-income Indian with a zero-document flow. BharatX keeps expanding its service to pay later for food delivery and ride-hailing apps.
+RedBrick AI
+Founded: 2020 in Pune, India
+Team size: 9
+Founders:
+
+Derek Lukacs, co-founder and CTO of RedBrick AI, previously co-founded the SpaceX Hyperloop pod competition team at the University of Michigan, where he graduated in aerospace engineering.
+Co-founder and CEO Shivam Sharma co-founded RedBrick AI to “address the challenge of creating high quality annotated medical datasets.” He is also the former co-founder of the Michigan Hyperloop team, selected by the Space X hyperloop competition.
+
+What they’re building: The company is building an AI SaaS platform that offers web-based medical annotation tools for 2D and 3D data. RedBrick AI’s tool, which automates up to 80% of iterative manual labeling, enables easy work for its customers and external labelers. Medical image annotation is the process of labeling medical imaging data, including X-Ray, CT, MRI scans, or ultrasound.
+Key quote: “The RedBrick configurable workflow system helps teams build robust and scalable quality assurance processes. RedBrick AI offers a suite of APIs to help developers consume the annotations being created, and integrate with MLOps,” the company wrote on Y Combinator’s blog.
+Our thoughts: Artificial intelligence (AI) can analyze a large amount of data in images stored by healthcare organizations. Health professionals will be able to save time, make better-informed decisions, and avoid potential errors through Redbrick AI’s tool.
+Streak
+Founded: 2020 in Bengaluru, India
+Team size: 7
+Founders:
+
+Shiv Bidani, co-founder of Streak, worked at PwC India prior to founding Streak.
+Balaji R, co-founder of Streak, says he’s “a hard-core engineer with experience in disturbed systems and databases.”
+Mitul Mehta, former CEO of BoxMyLook, a subscription-based fashion service, co-founded Streak. He also worked at CRED.
+
+What they’re building: A neo-banking platform for children in India. It provides a pre-paid card linked to its app with unique safety controls. The users can transact using the Streak card and earn coins for rewards.
+Key quote: “At Streak, we are building a new age personalized & gamified banking solution for teenagers,” the company wrote on Y Combinator’s blog.
+Our thoughts: This startup sounds like another edu-fintech startup for teens in the batch (see Yodaa at the very bottom) to help young adults save money and get smart with money.
+Castled Data
+Founded: 2021 in Bengaluru, India
+Team size: 10
+Founders:
+
+Franklin George, co-founder of Castled Data, whose background is in engineering, started his entrepreneurial journey with Castled Data. He previously worked at Nimble Storage, acquired by Hewlett Packard Enterprise, where George worked as a system software engineer.
+Manish Singh, co-founder and CEO of Castled Data, spent time scaling startups from initial to high growth stage – Flipkart, Lendingnkart and Hevo Data.
+Abhilash Thulaseedharan, co-founder and COO of Castled Data, has 14 years of experience in enterprise product development at IT service companies, including Virtusa and MindTree.
+Co-founder and CTO of Castled Data Arun Thulasidharan worked at large companies like Flipkart and Applied Materials. He also was the founding engineer of MedialQ and Hevodata.
+
+What they’re building: The company is building a reverse ETL platform that synchronizes data from customers’ cloud data warehouses to business apps like Salesforce, HubSpot and Google Ads.
+Key quote: “Castled helps organizations sync customer and product data in real-time from cloud data warehouses like Snowflake, Redshift, BigQuery, Postgres to their sales, marketing and support tools like Salesforce, Hubspot, Google Ads, Mixpanel, Intercome and lots more,” the company said.
+91Squarefeet
+Founded: 2019 in Gurugram, India
+Team size: 45
+Founders:
+
+Amit Bansal, co-founder and CEO of 91Squarefeet, previously co-founded Quifer.com, a logistics SaaS platform for enterprises, and Yoda, an e-learning provider, before launching 91Squarefeet.
+Puneet Bansal, an IIT Delhi graduate with civil engineering, co-founded 91Squarefeet. Previously he was a product manager at Quifers and a facilities designer at WSP.
+Amit Mishra, former co-founder and CEO of Quifers, acquired in May 2021, co-founded 91Squarefeet in 2019. He was an IIT Roorkee graduate.
+
+What they’re building: A platform that enables retail chains to open their offline stores at a click of a button. The company says it has built more than 300 stores in the past 9 months for brands like Bridgestone, Westside, Oyo, and Chai point using its AI-powered project planning software and a managed marketplace of contractors in India.
+Key quote: “India is massively building its retail infra in Tier2/3 towns,” co-founder and CEO Amit Bansal told The Economic Times. “From conceptualization to completion, we offer brands hassle-free turnkey retail fit-out solutions.”
+Our thoughts: 91Squarefeet claims it is growing more than 20% month-on-month despite the covid pandemic that accelerates consumers’ shift to online channels. According to The Economic Times, retailers and quick-service restaurant chains opened four new stores in India almost every day last year. With Covid restrictions easing in India, it is expected that more companies might have plans to open their offline offices and use 91Squarefeet’s platform.
+Shopr.tv
+Founded: 2021 in Bengaluru, India
+Team size: 10
+Founders:
+
+Mukul Anand, co-founder and CPO of Shopr.tv, previously worked as head of product at sports gaming app FanFight where Anand met his current co-founders. He’s an IIT Roorkee graduate.
+Co-founder and CTO Tushar Dhara held the vice president position at FanFight, which he scaled to support 8 million registered users.
+Akhil Suhag, co-founder and CEO of Shopr.tv, says he’s an avid sports nerd. He is a second-time entrepreneur who previously built FanFight.
+Co-founder and COO Akshay Suhag also built and scaled FanFight (to $7 million in yearly revenue) before it was acquired. He is an avid sports fan, especially Cricket, Football, and Formula 1.
+
+What they’re building: Shopr.tv, a live commerce platform, is Twitch for fashion and beauty, where creators can broadcast, build an audience, and monetize by selling over live streams. The startup says it has a strong partner pipeline, with over 70 creators and 12 brands whose products these creators can sell.
+Key quote: “We are Twitch for Fashion and Beauty, where creators can broadcast, build an audience, and monetize by selling over live streams,” the company wrote on Y Combinator’s blog.
+Our thoughts: The experienced co-founders are targeting a huge market, one that brings together live-streaming, e-commerce, and social networking. Shopr.tv claims that the slice of the beauty and fashion industry that it’s targeting is valued at $24 billion (which seems low, actually), and has 150 million consumers. Meanwhile, the young startup plans to make money by taking a 10-12% cut on every sale.
+
+
+
+Image: Bryce Durbin/TechCrunch
+
+
+Fieldproxy
+Founded: 2020 in Chennai, India
+Team size: 15
+Founders:
+
+Balakrishna Balasubramanian, co-founder of Fieldproxy, says he loves working on new products and ideas. He worked in the software development industry before founding Fieldproxy.
+Swaroop Vijayakumar, co-founder and CEO of Fieldproxy, is a former co-founder of Codemycompany.
+
+What they’re building: A no-code software-as-a-service (SaaS) platform that enables businesses build custom templates to streamline their interactions with the field force like merchandisers and sales.
+Key quote: “Our no-code application allows organizations to build internal mobile applications to manage field teams of any size,” the company wrote on Y Combinator’s blog.
+NinjaStudy
+Founded: 2022 in Bengaluru, India
+Team size: 3
+Founders:
+
+Shivam Gupta, co-founder of NinjaStudy, whose background is in artificial intelligence and machine learning, worked at Microsoft and Huawei.
+Anoop Jaiswal previously worked as a software engineer at human resource service provider Kredily before co-founding NinjaStudy.
+Akshay Sanghai, co-founder of NinjaStudy, an IIT Roorkee graduate in electronics and communications engineering, worked at Visa and Booking.com over the past 6 years.
+
+What they’re building: NinjaStudy is building an AI-driven English-speaking tutor app that helps English learners across the globe practice and learn English speaking with feedback on users’ grammar, pronunciation and fluency.
+Key quote: “You can imagine this as Siri/Alexa for learning and practicing English speaking,” the company wrote on Y Combinator’s blog.
+Our thoughts: NinjaStudy says it enables non-native English speakers to learn and practice English. They can use the app as if they are talking to Alex or Siri; an AI tutor will then correct users’ grammar, pronunciation, etc. Based on its website, NinjaStudy seems still to be working on its beta app, which is aimed at adults. When it’s out, we’d like to see whether it indeed offers unique features compared with its peers.
+Vance
+Founded: 2021 in Mumbai, India
+Team size: 11
+Founders:
+
+Parth Garg, co-founder and co-CEO at Vance, had dropped out of Stanford University to found startups.
+John Finkelman, co-founder and co-CEO of Vance, also dropped out of Stanford to found Vence in January 2022.
+
+What they’re building: Vance says it is a pipe.com of India. Its platform is aimed at helping startups transform recurring revenue into upfront capital for growth without debt or dilution.
+Key quote: “We help companies unlock their recurring revenue upfront. This gives them the boost to grow without dilution, warrants and hassle.”
+Our thoughts: Investors love this model. Just look at rival Pipe, which reached reached a valuation of $2 billion last May after raising $250 million. Notably, Pipe just launched in 2020.
+Harmoney
+Founded: 2021 in Mumbai, India
+Team size: 5
+Founders:
+
+Before co-founding Harmoney, Amal Dani worked at Goldman Sachs and a $2 billion hedge fund as a quantitative strategist. Dani, a graduate at IIT Bombay in computer science, says he enjoys solving problems from a data and technology perspective.
+Omkar Ghaisas, co-founder of Harmoney, worked in the corporate finance and wealth management industry over the past 8 years.
+Aditya Mehta, co-founder of Harmoney, is a former quant at Goldman Sachs and a director in the core team at consumer lending platform Paysense, which PayU acquired for $185 million in 2020.
+
+What they’re building: A bond trading platform for India’s financial institutions and asset managers in India.
+Key quote: “We are building the infrastructure to digitize bond markets and make bond trading more efficient,” the company wrote on Y Combinator’s blog.
+Janani.Life
+Founded: 2021 in Bengaluru, India
+Team size: 24
+Founders:
+
+Raj Garg, an IIT Roorkee graduate and former CTO at India-based startups Farmley and CharloT Tech, co-founded Janani.Life.
+Nilay Mehrotra, co-founder of Janani.Life, says he is passionate about revolutionizing sexual and reproductive healthcare. Mehrotra is a former founder and CEO of CharIoT Tech, an industrial AI and IoT startup in India.
+
+What they’re building: A home diagnostic fertility platform to help people suffering from infertility and sexual disorders.
+Key quote: “At Janani, we got to the root cause of the problem through our proprietary diagnostic and treatment plans created with the help of expert doctors,” Nilay Mehrotra co-founder said in an interview with The Economic Times.
+Our thoughts: Janani, which launched four months ago starting with at-home semen diagnostic, already generates about $8,000 revenue per month, growing 50% every month, the company wrote on Y Combinator’s blog. Janani makes $60 per customer, targeting 130 million infertile Indians. The global fertility treatment market is expected to reach $21.7 billion in 2025 from $15.74 billion in 2021. Janani recently has raised $2.2 million from investors, including Y Combinator, Olive Tree Capital, and Goodwater Capital, as per The Economic Times.
+
+
+
+Image Credits: Andriy Onufriyenko (opens in a new window) / Getty Images
+
+
+Arda
+Founded: 2022 in Delhi, India
+Team size: 2
+Founders:
+
+Pranay Shetty, CEO of Arda, has background in investment banking, private equity, and fintech. He helped launch CloudKitchens’ US and Asia business before founding Arda.
+Ramkumar Venkataraman, an engineer who built payments and high-scale systems over a decade at PayPal, Wise and Amazon. Venkataraman says he “believes in the transformative power of blockchain in democratizing access to finance, to everyone, everywhere, and at any time.”
+
+What they’re building: A platform allows fintech companies to embed DeFi products on their platform through a single API.
+Key quote: “We abstract away all the complexities of crypto. Our APIs are designed to be integrated in under 1 hour. We handle accounts and ledgering, so you [users] can focus on building a rich UX for your customers,” the company said on its website.
+Yodaa
+Founded: 2021 in Bengaluru, India
+Team size: 5
+Founders:
+
+Tanmaay K, co-founder of Yodaa, is a serial entrepreneur who founded Jhutpat Logistics and exited in 2020.
+Shival G is co-founder at Yodaa.
+
+What they’re building: A money app that empowers teens to spend, manage expenses, earn virtual Yo coins, access curated content on personal finance. The Yodaa app also offers fun quizzes for the teens. Parents are invited to get their own virtual Yodda cards, transfer monthly allowances digitally and help their teen’s growing personal savings.
+Key quote: “With Yodaa, our customers get access to a prepaid card and a smart money app. Using Yodaa they can make payments, save money, split bills, get credit, invest and learn about wealth creation,” the company said on Y Combinator’s blog.
+Our thoughts: As mentioned above, Yodaa sounds like a direct competitor to Streak, which was founded a year earlier than Yodaa. The startup also lets teens learn about managing their money from the early years.
+
+
+
+
+
+
+
+
+
+
+// Configure the PARSELY window global to disable auto-tracking.
+// Must load before the Parse.ly script itself.
+window.PARSELY = {
+autotrack: false,
+onload: this.onload,
+};
+
+
+if ( ! window.isSSR ) {
+(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'10000','properties':{'pixelId':'428726','qstrings': { 'et': 'custom','ea': 'page view','product_id': window.location.pathname,'site': 'techcrunch' },}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");
+}
+
+
+{"@context":"http:\/\/schema.org","publisher":{"@type":"Organization","name":"TechCrunch","logo":{"@type":"imageObject","url":"https:\/\/techcrunch.com\/wp-content\/themes\/techcrunch-2017\/images\/logo-json-ld.png","width":"600","height":"60"}},"@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/techcrunch.com\/2022\/03\/29\/y-combinator-india-winter-2022\/"},"headline":"India dominates Y Combinator\u2019s latest startup batch (again)","image":{"@type":"ImageObject","url":"https:\/\/techcrunch.com\/wp-content\/uploads\/2022\/03\/YC-DD-2022-india.jpg?w=680","width":680,"height":383},"datePublished":"2022-03-29T17:58:42+00:00","dateModified":"2022-03-29T20:59:04+00:00","author":[{"@type":"Person","name":"Natasha Mascarenhas"},{"@type":"Person","name":"Kate Park"}],"description":"Yet again, India is the most represented country, outside of the United States, within the latest Y Combinator accelerator batch: the Winter 2022 cohort sports 32 startups hailing from Gurugram, Bengaluru, Delhi, New Delhi, Hyderabad, Mumbai and Chennai. For what it\u2019s worth, more than 191 companies in India have been funded through the Y Combinator […]","speakable":{"@type":"SpeakableSpecification","cssSelector":[".alpha","#speakable-summary"]}}
+
+var wpParsely = {"apikey":"techcrunch.com"};
+
+
+
+
+
+try{Typekit.load({ async: true });}catch(e){}
+
+
+var tc_app_data = {"ads":{"gemini_enabled":false,"gemini_codes":{"position_4":{"mobile":"ae64471c-14c2-4457-8e9b-a5190206eafd","desktop":"b2018d9e-dedc-4e85-8823-b06917beb892"},"position_8":{"mobile":"619392a1-b497-4aa9-b683-24aab7246c16","desktop":"05c0b21d-e742-494d-ac59-474e3feaa4b8"}},"mns":[{"name":"Homepage and its pagination","conditions":{"paths":["(^\/$)|(\/page\/\\d+)"]},"placements":{"native_inriver":"93484857","leaderboard":"93484945","rightrail1":"93484946","native_mobile_inriver":"93484858","mobile_footer":"93484942","mobile_leaderboard":"93484943","native_rightrail2":"963913331","rightrail2":"963913914","native_rightrail1":"963903172","rightrail_feature_island":"963923670"}},{"name":"Tag - Startups","conditions":{"taxonomy":"post_tag","terms":["startups"]},"placements":{"mobile_footer":"93484986","mobile_leaderboard":"93484987","leaderboard":"93484988","amp_leaderboard":"963912138","rightrail1":"93484989","rightrail2":"963913915","article_footer":"963908973","amp_footer":"93523762","amp_midarticle":"963923317","native_midarticle":"963922183","native_rightrail1":"963912091","native_rightrail2":"963913330","native_mobile_midarticle":"963922184","native_mobile_footer":"963923619"}},{"name":"Category - Startups","conditions":{"taxonomy":"category","terms":["startups"]},"placements":{"mobile_footer":"93484986","mobile_leaderboard":"93484987","leaderboard":"93484988","amp_leaderboard":"963912138","rightrail1":"93484989","native_rightrail1":"963912091","article_footer":"963908973","amp_footer":"93523762","native_rightrail2":"963913330","rightrail2":"963913915","amp_midarticle":"963923317","native_midarticle":"963922183","native_mobile_midarticle":"963922184","native_mobile_footer":"963923619"}},{"name":"Tag - 5G","conditions":{"taxonomy":"post_tag","terms":["5g","5G"]},"placements":{"mobile_footer":"963898333","mobile_leaderboard":"963898334","amp_footer":"963898332","leaderboard":"963898335","amp_leaderboard":"963912139","rightrail1":"963898336","native_rightrail1":"963909550","article_footer":"963908970","native_rightrail2":"963913333","amp_midarticle":"963923310","native_midarticle":"963922183","rightrail2":"963913916","native_mobile_midarticle":"963922184","native_mobile_footer":"963923619"}},{"name":"URL - 5G","conditions":{"paths":["\/tag\/5g"]},"placements":{"leaderboard":"963898335","rightrail1":"963898336","rightrail2":"963913916","mobile_leaderboard":"963898334","mobile_footer":"963898333","native_inriver":"93501877","native_mobile_inriver":"93501878"}},{"name":"Tag - Disrupt","conditions":{"taxonomy":"post_tag","terms":["disrupt"]},"placements":{"mobile_footer":"93484895","mobile_leaderboard":"93484896","leaderboard":"93484897","amp_leaderboard":"963912142","rightrail1":"93484898","native_rightrail1":"963911273","amp_footer":"93523765","native_rightrail2":"963913336","amp_midarticle":"963923313","native_midarticle":"963922183","native_mobile_midarticle":"963922184","rightrail2":"963913919","article_footer":"963911272","native_mobile_footer":"963923619"}},{"name":"Tag - Holiday Gift Guide","conditions":{"taxonomy":"post_tag","terms":["gift-guide-2021"]},"placements":{"mobile_footer":"93484930","mobile_leaderboard":"93484931","leaderboard":"93484932","amp_leaderboard":"963912143","rightrail1":"93484933","article_footer":"963908971","amp_footer":"963874680","rightrail2":"963913920","amp_midarticle":"963923314","native_rightrail1":"963912093","native_rightrail2":"963913337","native_mobile_footer":"963923619"}},{"name":"URL - Holiday Gift Guide","conditions":{"paths":["\/pages\/gift-guide-2021\/","\/tag\/gift-guide-2021\/"]},"placements":{"mobile_footer":"93484930","mobile_leaderboard":"93484931","leaderboard":"93484932","rightrail1":"93484933","rightrail2":"963913920","native_inriver":"93501877","native_mobile_inriver":"93501878"}},{"name":"Tag - CES","conditions":{"taxonomy":"post_tag","terms":["ces","CES","ces-2021","CES-2021","ces-2022","ces-2020","ces-2019"]},"placements":{"mobile_footer":"93484876","mobile_leaderboard":"93484877","leaderboard":"93484878","amp_leaderboard":"963912141","rightrail1":"93484879","native_rightrail1":"963910470","article_footer":"963909894","amp_footer":"963874677","native_rightrail2":"963913335","rightrail2":"963913918","amp_midarticle":"963923312","native_midarticle":"963922183","native_mobile_midarticle":"963922184","native_mobile_footer":"963923619"}},{"name":"URL - CES","conditions":{"paths":["\/tag\/ces-2022","\/tag\/ces-2021","\/tag\/ces-2020","\/tag\/ces-2019","\/tag\/ces"]},"placements":{"leaderboard":"93484878","rightrail1":"93484879","rightrail2":"963913918","mobile_leaderboard":"93484877","mobile_footer":"93484876","native_inriver":"93501877","native_mobile_inriver":"93501878"}},{"name":"Post Type - Sponsored post defaults","conditions":{"post_types":["tc_sponsored_post"]},"placements":{"leaderboard":"963872468","rightrail1":"963872467","mobile_leaderboard":"963872466","mobile_footer":"963909570"}},{"name":"Run of site \/ fallback","conditions":[],"placements":{"native_inriver":"93501877","native_mobile_inriver":"93501878","leaderboard":"93484975","amp_leaderboard":"963912137","rightrail1":"93484976","native_rightrail1":"963912090","native_mobile_footer":"963923619","native_rightrail2":"963913332","native_midarticle":"963922183","native_mobile_midarticle":"963922184","amp_footer":"93523784","amp_midarticle":"963923315","rightrail2":"963913913","article_footer":"963908972","mobile_leaderboard":"93484974","mobile_footer":"93484973"}}]},"assetURI":"https:\/\/techcrunch.com\/wp-content\/themes\/techcrunch-2017","breaking":"","live_event":"0","feature_islands":{"homepage":[{"id":2291966,"date":"2022-03-31T13:56:16","date_gmt":"2022-03-31T20:56:16","guid":{"rendered":"https:\/\/techcrunch.com\/?p=2291966"},"modified":"2022-03-31T13:56:27","modified_gmt":"2022-03-31T20:56:27","slug":"co-founders-of-ukrainian-startup-delfast-discuss-navigating-through-a-crisis","status":"publish","type":"post","link":"https:\/\/techcrunch.com\/2022\/03\/31\/co-founders-of-ukrainian-startup-delfast-discuss-navigating-through-a-crisis\/","title":{"rendered":"Co-founders of Ukrainian startup Delfast discuss navigating through a crisis"},"content":{"rendered":" The COVID-19 pandemic<\/span> taught the world how to work from home, but Russia\u2019s war in Ukraine has taught the employees at Delfast, a Ukrainian e-bike startup, how to work from bomb shelters, while on the move and under threat of violence.\u00a0<\/span><\/p>\n The usual priorities of a startup \u2013 securing venture funding, researching and developing new products, finding product-market fit \u2013 haven\u2019t exactly been put on hold, but they are now much lower on Delfast\u2019s to-do list. Since Russian troops invaded Ukraine in late February, Delfast\u2019s top priority has been to see its Ukrainian team of 30 safely evacuated from the most dangerous parts of the country.\u00a0<\/span><\/p>\n When not focusing on sales, marketing, R&D and customer support, Delfast\u2019s smaller team of seven employees based in Los Angeles has been pleading with U.S. politicians and the European Commission to supply Ukraine with anti-aircraft missiles and fighter jets that could help Ukraine gain back some control over its air space, and, hopefully, put a stop to this war.\u00a0<\/span><\/p>\n Delfast\u2019s co-founders, Daniel Tonkopi and Serhiy Denysenko, say they have always believed in safeguarding the future. When they founded Delfast in 2014, originally as a delivery company, Tonkoply and Denysenko knew that providing couriers with green transportation options would be critical to the company\u2019s operations.\u00a0<\/span><\/p>\n \t \n\t\t \n\t\t\tThe most important thing for an entrepreneur, and in general for any leader, is to protect the team and be completely honest with them during a tough time.\t\t\t\t\t\t\tDaniel Tonkopi, co-founder of Delfast<\/cite>\n\t\t\t\t\t<\/blockquote>\n\t<\/div>\n\t<\/span><\/p>\n The founders soon realized that a bike with the power, range and battery life their couriers needed didn\u2019t exist, and so they set out to build one. In 2017, backed by a Kickstarter campaign that saw the company raise $165,000, the startup began manufacturing a bike to fit its needs \u2013 one that promptly <\/span>won the Guinness Book of World Records<\/span><\/a> for the greatest distance traveled on an electric motorbike on a single charge.<\/span><\/p>\n More recently, the Delfast Top 3.0 e-motorbike <\/span>won Forbes\u2019 fastest e-bike of the year<\/span><\/a> in 2022 after the company announced some serious <\/span>upgrades to the vehicle during CES<\/span><\/a>.\u00a0<\/span><\/p>\n We spoke with Delfast\u2019s co-founders to discuss what it\u2019s like running a startup during a war, how the startup is considering breaking into new business verticals, and the importance of always having a Plan B.\u00a0<\/span><\/p>\n The following interview, part of an ongoing series with founders who are building transportation companies, has been edited for length and clarity.\u00a0<\/span><\/i><\/p>\n Note: Serhiy Denysenko\u2019s answers were translated from Ukrainian by a member of Delfast\u2019s team for TechCrunch.\u00a0<\/span><\/i><\/p>\n TC: Serhiy, you’re on the ground in Kyiv. What’s your day-to-day like?<\/b><\/p>\n Denysenko: <\/b>Every morning starts with a check-in on Slack with all the colleagues. It\u2019s important to keep in touch and know that everyone is fine, or as fine as is possible right now.\u00a0<\/span><\/p>\n Besides my work as a COO, I\u2019ve been helping with volunteering, getting supplies and medicine to people, and this is something that pretty much every Ukrainian is now doing. I had my family relocated to Hungary, so I feel more or less safe, and I\u2019m just trying to work as much as possible and do my best in every possible area, whether that\u2019s supporting the company or supporting Ukraine in general.\u00a0<\/span><\/p>\n How are you managing your team through this crisis? What\u2019s changed?<\/b><\/p>\n Denysenko: <\/b>We got used to working remotely during Coronavirus times, so we have our task tracker, where everyone can see his or her task. Every Monday, we have an online Zoom meeting. Previously we only had these meetings at the executive level, but now during the war, we are gathering all together, just to see each other\u2019s faces and ask how they\u2019re doing, how\u2019s everyone feeling. Just to talk with everybody.\u00a0<\/span><\/p>\n <\/div>","protected":false},"excerpt":{"rendered":" “Every morning starts with a check-in on Slack with all the colleagues. It\u2019s important to keep in touch and know that everyone is fine, or as fine as is possible right now.”<\/p>\n","protected":false},"author":133574434,"featured_media":2291968,"comment_status":"open","ping_status":"closed","sticky":false,"template":"","format":"standard","meta":{"outcome":"","status":"","crunchbase_tag":0,"amp_status":"","relegenceEntities":[],"relegenceSubjects":[],"carmot_uuid":"91bf565f-a057-3836-8bac-dec8cc231af0"},"categories":[576602978,1102388,449223024,20429,2401],"tags":[576969762,4720757,2621719,576856615,4517177,514217,103650,32875,344761,9675,576638690,10759,429989,11701,34926503,22735,449557049],"crunchbase_tag":[],"tc_stories_tax":[],"tc_ec_category":[576796357],"tc_event":[],"jetpack_featured_media_url":"https:\/\/techcrunch.com\/wp-content\/uploads\/2022\/03\/Tonkopiy-Denysenko.png","parsely":{"version":"1.0.0","meta":{"@context":"http:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/techcrunch.com\/2022\/03\/31\/co-founders-of-ukrainian-startup-delfast-discuss-navigating-through-a-crisis\/"},"headline":"The Future of Flight","url":"https:\/\/techcrunch.com\/2022\/03\/31\/co-founders-of-ukrainian-startup-delfast-discuss-navigating-through-a-crisis\/","thumbnailUrl":"https:\/\/techcrunch.com\/wp-content\/uploads\/2022\/03\/Tonkopiy-Denysenko.png?w=150","image":{"@type":"ImageObject","url":"https:\/\/techcrunch.com\/wp-content\/uploads\/2022\/03\/Tonkopiy-Denysenko.png?w=150"},"dateCreated":"2022-03-31T20:56:16Z","datePublished":"2022-03-31T20:56:16Z","dateModified":"2022-03-31T20:56:27Z","articleSection":"tc_video","author":[{"@type":"Person","name":"Rebecca Bellan"}],"creator":["Rebecca Bellan"],"publisher":{"@type":"Organization","name":"TechCrunch","logo":{"@type":"imageObject","url":"https:\/\/techcrunch.com\/wp-content\/themes\/techcrunch-2017\/images\/logo-json-ld.png","width":"600","height":"60"}},"keywords":["@post-id:2163602","tc"]},"rendered":"\n
+
+
+
+
+_stq = window._stq || [];
+_stq.push([ 'view', {v:'ext',j:'1:10.7',blog:'136296444',post:'2290542',tz:'-7',srv:'techcrunch.com'} ]);
+_stq.push([ 'clickTrackerInit', '136296444', '2290542' ]);
+
+
+
