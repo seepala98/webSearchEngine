@@ -153,7 +153,7 @@ public class Crawler {
 		String domainName = getDomainName(user_url);
 		System.out.println(" the domain name is " + domainName);
 		if (isUrlCorrect(user_url)) {
-			uniqueUrls = crawler(user_url, 3);
+			uniqueUrls = crawler(user_url, 2);
 		} else {
 			System.out.println("Invalid url");
 		}
@@ -164,7 +164,7 @@ public class Crawler {
 		assert uniqueUrls != null;
 		int count = 0;
 		for (String url : uniqueUrls) {
-			if (shouldCrawlUrl(url, domainName) && count < 300) {
+			if (shouldCrawlUrl(url, domainName) && count < 80) {
 				System.out.println(url);
 				String html = getHtml(url);
 				String fileName = downloadHtml(html);
@@ -190,8 +190,8 @@ public class Crawler {
 		String input = scanner.next();
 		PriorityQueue<Integer, String> pq = null;
 		try {
-			pq = PageRanking.occurrences(input);
-			RankingPayload[] docs = PageRanking.queue2List(pq);
+			pq = PageRanking.getWordCountFromAllFiles(input);
+			RankingPayload[] docs = PageRanking.convertToRankPayload(pq);
 			for (int i = 0; i < docs.length; i++) {
 				System.out.println((i + 1) + " Rank goes to - " + crawledUrls.get(docs[i].getName()));
 			}

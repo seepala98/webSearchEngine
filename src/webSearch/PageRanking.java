@@ -27,48 +27,61 @@ public class PageRanking {
 		this.crawledUrlAndFileName = crawledUrlAndFileName;
 	}
 
-	public static PriorityQueue<Integer, String> occurrences(String scan) throws IOException {
-		String txtPath = "Text/";
-		String htmlPath = "htmlFiles/";
-
+	public static PriorityQueue<Integer, String> getWordCountFromAllFiles(String scan) throws IOException {
+		final String txtPath = "Text/";
+		final String htmlPath = "htmlFiles/";
 		File txt = new File(txtPath);
-		File[] Files = txt.listFiles();
+		File[] textFile = txt.listFiles();
 		File html = new File(htmlPath);
-		File[] Webs = html.listFiles();
+		File[] htmlFiles = html.listFiles();
 		PriorityQueue<Integer, String> pq = null;
 		
-		if (Files.length != 0 && Webs.length != 0) {
+		if (textFile.length != 0 && htmlFiles.length != 0 && (textFile.length == htmlFiles.length)) {
 			pq = new SortedPriorityQueue<>();
 			// scan new files
-			for (int i = 0; i < Files.length; i++) {
-				if (Files[i].isFile()) {
+			for (int i = 0; i < textFile.length; i++) {
+				if (textFile[i].isFile()) {
 					TST<Integer> tst = new TST<Integer>();
-					String path = (txtPath + Files[i].getName());
-					scanFile(path, tst);// get occurrence from matching given word
+					String path = (txtPath + textFile[i].getName());
+					setFrequency(path, tst);
 					if (tst.get(scan) != null) {
 						// store occurrence and web name in priority queue
-						pq.insert(tst.get(scan), Webs[i].getName());
+						pq.insert(tst.get(scan), htmlFiles[i].getName());
 					}
 				}
 			}
 		}
 		return pq;
 	}
-
-	public static RankingPayload[] queue2List(PriorityQueue<Integer, String> pq) throws IOException {
+	
+	/**
+	 * 
+	 * @param pq
+	 * @return
+	 * @throws IOException
+	 * This helper method is used
+	 */
+	public static RankingPayload[] convertToRankPayload(PriorityQueue<Integer, String> pq) throws IOException {
 		RankingPayload[] queryResults = new RankingPayload[pq.size()];
-		Iterator<Entry<Integer, String>> s = pq.iterator();
+		Iterator<Entry<Integer, String>> QueueIterator = pq.iterator();
 		int flag = 0;
-		while (s.hasNext()) {
-			Entry<Integer, String> tmp = s.next();
-			RankingPayload doc = new RankingPayload(tmp.getKey(), tmp.getValue());
-			queryResults[(pq.size() - 1) - flag] = doc;
+		while (QueueIterator.hasNext()) {
+			Entry<Integer, String> entry = QueueIterator.next();
+			RankingPayload payload = new RankingPayload(entry.getKey(), entry.getValue());
+			queryResults[(pq.size() - 1) - flag] = payload;
 			flag++;
 		}
 		return queryResults;
 	}
-
-	public static void scanFile(String fileName, TST<Integer> tst) throws IOException {
+	
+	/**
+	 * 
+	 * @param fileName
+	 * @param tst
+	 * @throws IOException
+	 * This method is used to set frequecy of each word to TST data structure. 
+	 */
+	public static void setFrequency(String fileName, TST<Integer> tst) throws IOException {
 		StringBuffer sb = new StringBuffer();
 		FileReader file = new FileReader(fileName);
 		BufferedReader br = new BufferedReader(file);
@@ -78,11 +91,12 @@ public class PageRanking {
 			sb.append(line);
 		}
 		br.close();
-		String article = sb.toString();
-		// split ,*)?;/&#<-.!:\"\"''\n to get word by use Tokenizer
-		StringTokenizer st = new StringTokenizer(article, " ,`*$|~(){}_@><=+[]\\?;/&#<-.!:\"\"''\n");
-		while (st.hasMoreTokens()) {
-			String word = st.nextToken(); // return string until next token;
+		String content = sb.toString();
+		
+		//  get word by use of Tokenizer
+		StringTokenizer tokenizer = new StringTokenizer(content, " ,`*$|~(){}_@><=+[]\\?;/&#<-.!:\"\"''\n");
+		while (tokenizer.hasMoreTokens()) {
+			String word = tokenizer.nextToken();
 			if (tst.contains(word)) {
 				int count = tst.get(word);
 				tst.put(word, count + 1);
@@ -91,12 +105,16 @@ public class PageRanking {
 			}
 		}
 	}
-
+	
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		try {
-			PriorityQueue<Integer, String> pq = occurrences("the");
+			PriorityQueue<Integer, String> pq = getWordCountFromAllFiles("the");
 			if (pq != null) {
-				RankingPayload[] docs = queue2List(pq);
+				RankingPayload[] docs = convertToRankPayload(pq);
 				for (int i = 0; i < docs.length; i++) {
 					System.out.println("Rank of the file :- " + docs[i].getName() + " is :- " + docs[i].getRank());
 				}
