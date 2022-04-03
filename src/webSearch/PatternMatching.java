@@ -3,8 +3,12 @@ package webSearch;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import textprocessing.KMP;
 
@@ -15,41 +19,98 @@ public class PatternMatching {
 		while(true)
 		{
 			Scanner scan = new Scanner(System.in);
+			
 			System.out.println("-------------------------------------------------------");
-			System.out.println("Enter the word you would like to search: ");
-			String SearchKey = scan.nextLine();
+			
 			int numOfOccurrence = 0;
 			int pageCount = 0;
-			String userChoice = "yes";
+			System.out.println("Would you like to search the contact details: ");
+			String userChoice = scan.nextLine();
 			Hashtable<String, Integer> listOfOccurences = new Hashtable<String, Integer>();
+			File folder = new File("C:\\Users\\srava\\eclipse-workspace\\Assignement4_110072772\\src\\W3C Web Pages\\Text");
 			
-			try {
-				File folder = new File("C:\\Users\\srava\\eclipse-workspace\\Assignement4_110072772\\src\\W3C Web Pages\\Text");
-	
-				File[] files = folder.listFiles();
-				for (int i = 0; i < files.length; i++) {
-					numOfOccurrence = wordSearch(files[i], SearchKey); // searching word for the user input
+			File[] files = folder.listFiles();
+			
+			if(userChoice.equals("yes"))
+			{
+				System.out.println("Enter email ID domain or area code of the Phone number you would like to search: ");
+				String SearchKey = scan.nextLine();
+				ArrayList<String> emailPattern = new ArrayList<String>();
+				ArrayList<String> phPattern = new ArrayList<String>();
 					
-					if (numOfOccurrence != 0)
+				if(SearchKey.contains("@"))
+				{
+					String email = "^[A-Z0-9._%+-]+" + SearchKey;
+					for(File file : files) {
+						if(!file.isDirectory()) {
+							String fileText = GetTextFromFile(file);
+							Matcher emailMatch = Pattern.compile(email, Pattern.CASE_INSENSITIVE).matcher(fileText);
+							while (emailMatch.find()) {
+								emailPattern.add(file.getName());
+							}
+						}
+					}
+					
+					System.out.println("Below files contain the email with domain " + SearchKey);
+					for(String fileName : emailPattern)
 					{
-						pageCount++;
-						listOfOccurences.put(files[i].getName(), numOfOccurrence);
+						System.out.println(fileName);
 					}
 				}
-				System.out.println("\n----------------------------------------------------------------");
-	
-				if (pageCount == 0) {
-					System.out.println("\n\n--------------------------------------------------------------");
-					System.out.println("Searched word is not found!!!");
-				} else {
+				else
+				{
+					String phNumber = "^" + SearchKey + "+(\\d{7}|(?:\\(?\\d{3}\\)?[-\\s]?){2}(\\d{4}))";
+					for(File file : files) {
+						if(!file.isDirectory()) {
+							String fileText = GetTextFromFile(file);
+							Matcher pattern = Pattern.compile(phNumber, Pattern.CASE_INSENSITIVE).matcher(fileText);
+							while (pattern.find()) {
+								phPattern.add(file.getName());
+							}
+						}
+					}
 					
-					System.out.println("Searched word is found!!!");
-					listOfOccurences.forEach(
-				            (k, v) -> System.out.println("Key : " + k + ", Value : " + v));
+					System.out.println("Below files contain the phone numbers with area code " + SearchKey);
+					for(String fileName : phPattern)
+					{
+						System.out.println(fileName);
+					}
 				}
-			} catch (Exception e) {
-				e.printStackTrace();
+				
 			}
+			else
+			{
+				try {
+					
+					System.out.println("Enter the word you would like to search: ");
+					String SearchKey = scan.nextLine();
+				
+					for (int i = 0; i < files.length; i++) {
+						numOfOccurrence = wordSearch(files[i], SearchKey); // searching word for the user input
+						
+						if (numOfOccurrence != 0)
+						{
+							pageCount++;
+							listOfOccurences.put(files[i].getName(), numOfOccurrence);
+						}
+					}
+					System.out.println("\n----------------------------------------------------------------");
+		
+					if (pageCount == 0) {
+						System.out.println("\n\n--------------------------------------------------------------");
+						System.out.println("Searched word is not found!!!");
+					} else {
+						
+						System.out.println("Searched word is found!!!");
+						listOfOccurences.forEach(
+					            (k, v) -> System.out.println("Key : " + k + ", Value : " + v));
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+			}
+			
 			System.out.println("\n\n Would you like to search something else(yes/no)?");
 			userChoice = scan.nextLine();
 			if(userChoice == "no")
@@ -59,6 +120,21 @@ public class PatternMatching {
 		}
 	}
 		
+	public static String GetTextFromFile(File f) {
+		StringBuilder sb = new StringBuilder();
+		String lines;
+		try {
+		BufferedReader br = new BufferedReader(new FileReader(f));
+		while ((lines = br.readLine()) != null) {
+			sb.append(lines);
+		}
+		br.close();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+		return sb.toString();
+	}
 	public static int wordSearch(File filePath, String word)
 	{
 		int occurrences = 0;
@@ -92,7 +168,8 @@ public class PatternMatching {
 		return occurrences;
 	}
 
-	public static int search(String pattern, String word) {
+	public static int search(String pattern, String word) 
+	{
 	
 			try
 			{
