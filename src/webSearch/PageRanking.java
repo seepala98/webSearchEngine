@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 import com.searchengine.helper.Entry;
@@ -79,7 +80,7 @@ public class PageRanking {
 	 * @param fileName
 	 * @param tst
 	 * @throws IOException
-	 * This method is used to set frequecy of each word to TST data structure. 
+	 * This method is used to set frequency of each word to TST data structure. 
 	 */
 	public static void setFrequency(String fileName, TST<Integer> tst) throws IOException {
 		StringBuffer sb = new StringBuffer();
@@ -111,8 +112,10 @@ public class PageRanking {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		Scanner input = new  Scanner(System.in);
 		try {
-			PriorityQueue<Integer, String> pq = getWordCountFromAllFiles("the");
+			String inputString =  input.next(); 
+			PriorityQueue<Integer, String> pq = getWordCountFromAllFiles(inputString);
 			if (pq != null) {
 				RankingPayload[] docs = convertToRankPayload(pq);
 				for (int i = 0; i < docs.length; i++) {
@@ -121,6 +124,8 @@ public class PageRanking {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+			input.close();
 		}
+		input.close();
 	}
 }

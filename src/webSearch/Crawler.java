@@ -90,7 +90,7 @@ public class Crawler {
 			filePath = null;
 			e.printStackTrace();
 		}
-		return filePath;
+		return fileName.replace(" ", "") + ".html";
 	}
 
 	// download html content and store it in the folder
@@ -174,6 +174,10 @@ public class Crawler {
 		}
 		//print the unique urls
 		System.out.println(uniqueUrls);
+		
+		//HtmltoText
+		HtmltoText.convertHtmlToText();
+		
 		showPageRanking();
 	}
 	
@@ -183,7 +187,6 @@ public class Crawler {
 	 * This method is used rank pages based on occurrences of input word
 	 */
 	public static void showPageRanking() {
-		// page ranking
 		PageRanking ranking = new PageRanking(crawledUrls);
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("*** Enter the word to be searched ***");
