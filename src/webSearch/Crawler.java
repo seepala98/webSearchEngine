@@ -5,7 +5,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -178,6 +183,7 @@ public class Crawler {
 		//HtmltoText
 		HtmltoText.convertHtmlToText();
 		
+		//
 		showPageRanking();
 	}
 	
@@ -194,14 +200,33 @@ public class Crawler {
 		PriorityQueue<Integer, String> pq = null;
 		try {
 			pq = PageRanking.getWordCountFromAllFiles(input);
-			RankingPayload[] docs = PageRanking.convertToRankPayload(pq);
-			for (int i = 0; i < docs.length; i++) {
-				System.out.println((i + 1) + " Rank goes to - " + crawledUrls.get(docs[i].getName()));
+			RankingPayload[] rankedPageMetadata = PageRanking.convertToRankPayload(pq);
+			if(rankedPageMetadata.length>0) {
+			for (int i = 0; i < rankedPageMetadata.length && i<10; i++) {
+				System.out.println((i + 1) + " Rank goes to - " + crawledUrls.get(rankedPageMetadata[i].getName()));
+				System.out.println("Occurences of word in " + rankedPageMetadata[i].getName() +  " is/are --> " + rankedPageMetadata[i].getRank());
+				System.out.println("________________________________________________");
+			}
+			}else {
+				System.out.println(" Word :- " + input + " is not found in any of the files so printing first 10 links");
+				Iterator it = crawledUrls.entrySet().iterator();
+				int counter = 0;
+			    while (it.hasNext()) {
+			        Map.Entry pair = (Map.Entry)it.next();
+			        System.out.println((counter + 1) + " Rank goes to - " + pair.getValue());
+			        it.remove(); // to avoid a ConcurrentModificationException
+			        counter++;
+			        if(counter == 10) {
+			        	break;
+			        }
+			    }
 			}
 			scanner.close();
 		} catch (Exception e) {
 			System.out.println("Error Occured while calculating page ranking");
 			System.out.println(e.getMessage());
 		}
+		
+		System.out.println("*** Finished ranking *** ");
 	}
 }

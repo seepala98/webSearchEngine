@@ -27,8 +27,7 @@ public class PageRanking {
 	public PageRanking(HashMap<String, String> crawledUrlAndFileName) {
 		this.crawledUrlAndFileName = crawledUrlAndFileName;
 	}
-
-	public static PriorityQueue<Integer, String> getWordCountFromAllFiles(String scan) throws IOException {
+	public static PriorityQueue<Integer, String> getWordCountFromAllFiles(String input) throws IOException {
 		final String txtPath = "Text/";
 		final String htmlPath = "htmlFiles/";
 		File txt = new File(txtPath);
@@ -45,9 +44,9 @@ public class PageRanking {
 					TST<Integer> tst = new TST<Integer>();
 					String path = (txtPath + textFile[i].getName());
 					setFrequency(path, tst);
-					if (tst.get(scan) != null) {
-						// store occurrence and web name in priority queue
-						pq.insert(tst.get(scan), htmlFiles[i].getName());
+					if (tst.get(input) != null) {
+						// store counts and web name in priority queue
+						pq.insert(tst.get(input), htmlFiles[i].getName());
 					}
 				}
 			}
@@ -57,7 +56,7 @@ public class PageRanking {
 	
 	/**
 	 * 
-	 * @param pq
+	 * @param SortedPriorityQueue
 	 * @return
 	 * @throws IOException
 	 * This helper method is used
@@ -65,12 +64,12 @@ public class PageRanking {
 	public static RankingPayload[] convertToRankPayload(PriorityQueue<Integer, String> pq) throws IOException {
 		RankingPayload[] queryResults = new RankingPayload[pq.size()];
 		Iterator<Entry<Integer, String>> QueueIterator = pq.iterator();
-		int flag = 0;
+		int counter = 0;
 		while (QueueIterator.hasNext()) {
 			Entry<Integer, String> entry = QueueIterator.next();
 			RankingPayload payload = new RankingPayload(entry.getKey(), entry.getValue());
-			queryResults[(pq.size() - 1) - flag] = payload;
-			flag++;
+			queryResults[(pq.size() - 1) - counter] = payload;
+			counter++;
 		}
 		return queryResults;
 	}
@@ -86,7 +85,6 @@ public class PageRanking {
 		StringBuffer sb = new StringBuffer();
 		FileReader file = new FileReader(fileName);
 		BufferedReader br = new BufferedReader(file);
-//			TST<Integer> tst = new TST<Integer>();
 		String line = null;
 		while ((line = br.readLine()) != null) {
 			sb.append(line);
