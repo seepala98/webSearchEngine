@@ -1,6 +1,5 @@
 package com.searchengine.helper;
 
-import textprocessing.StdOut;
 
 public class KMP {
    private final int R;       // the radix
@@ -98,16 +97,16 @@ public class KMP {
        int offset2 = kmp2.search(text);
 
        // print results
-       StdOut.println("text:    " + txt);
+       System.out.println("text:    " + txt);
 
-       StdOut.print("pattern: ");
+       System.out.print("pattern: ");
        for (int i = 0; i < offset1; i++)
-           StdOut.print(" ");
-       StdOut.println(pat + " at pos " + offset1);
+    	   System.out.print(" ");
+       System.out.println(pat + " at pos " + offset1);
 
-       StdOut.print("pattern: ");
+       System.out.print("pattern: ");
        for (int i = 0; i < offset2; i++)
-           StdOut.print(" ");
-       StdOut.println(pat + " at pos " + offset2);
+    	   System.out.print(" ");
+       System.out.println(pat + " at pos " + offset2);
    }
 }
