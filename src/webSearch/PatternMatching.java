@@ -27,7 +27,7 @@ public class PatternMatching {
 			System.out.println("Would you like to search the contact details: ");
 			String userChoice = scan.nextLine();
 			Hashtable<String, Integer> listOfOccurences = new Hashtable<String, Integer>();
-			File folder = new File("C:\\Users\\srava\\eclipse-workspace\\Assignement4_110072772\\src\\W3C Web Pages\\Text");
+			File folder = new File("Text/");
 			
 			File[] files = folder.listFiles();
 			
@@ -38,7 +38,7 @@ public class PatternMatching {
 				ArrayList<String> emailPattern = new ArrayList<String>();
 				ArrayList<String> phPattern = new ArrayList<String>();
 					
-				if(SearchKey.contains("@"))
+				if(SearchKey.contains("@"))//EMAIL PATTERN
 				{
 					String email = "^[A-Z0-9._%+-]+" + SearchKey;
 					for(File file : files) {
@@ -57,7 +57,7 @@ public class PatternMatching {
 						System.out.println(fileName);
 					}
 				}
-				else
+				else//MOBILE NUMBER 
 				{
 					String phNumber = "^" + SearchKey + "+(\\d{7}|(?:\\(?\\d{3}\\)?[-\\s]?){2}(\\d{4}))";
 					for(File file : files) {
@@ -86,7 +86,7 @@ public class PatternMatching {
 					String SearchKey = scan.nextLine();
 				
 					for (int i = 0; i < files.length; i++) {
-						numOfOccurrence = wordSearch(files[i], SearchKey); // searching word for the user input
+						numOfOccurrence = PatternSearch(files[i], SearchKey); // searching word for the user input
 						
 						if (numOfOccurrence != 0)
 						{
@@ -121,21 +121,21 @@ public class PatternMatching {
 	}
 		
 	public static String GetTextFromFile(File f) {
-		StringBuilder sb = new StringBuilder();
+		StringBuilder stringBuilder = new StringBuilder();
 		String lines;
 		try {
-		BufferedReader br = new BufferedReader(new FileReader(f));
-		while ((lines = br.readLine()) != null) {
-			sb.append(lines);
+		BufferedReader bufferReader = new BufferedReader(new FileReader(f));
+		while ((lines = bufferReader.readLine()) != null) {
+			stringBuilder.append(lines);
 		}
-		br.close();
+		bufferReader.close();
 		}
 		catch (IOException e) {
 			e.printStackTrace();
 		}
-		return sb.toString();
+		return stringBuilder.toString();
 	}
-	public static int wordSearch(File filePath, String word)
+	public static int PatternSearch(File filePath, String searchPattern)
 	{
 		int occurrences = 0;
 		String fileContent="";
@@ -145,7 +145,7 @@ public class PatternMatching {
 			String line = null;
 			
 			while ((line = bufReader.readLine()) != null){
-				fileContent= fileContent+line;
+				fileContent= fileContent+line;//GET THE FILE CONTENTS AS A STRING
 			}
 			bufReader.close();
 		}
@@ -153,15 +153,15 @@ public class PatternMatching {
 		{
 			System.out.println("Exception:" + ex);
 		}
-		// LOOKING FOR THE POSITION OF THE WORD
+		// LOOKING FOR WORD OFFSET
 		String fileContents = fileContent; 
 			
-		int offsetw = 0;
+		int offset = 0;
 		
-		for (int location = 0; location <= fileContents.length(); location += offsetw + word.length()) 
+		for (int location = 0; location <= fileContents.length(); location += offset + searchPattern.length()) 
 		{
-			offsetw = search(word, fileContents.substring(location)); 
-			if ((offsetw + location) < fileContents.length()) {
+			offset = search(searchPattern, fileContents.substring(location)); //SEARCH USING THE KMP ALGORITHM
+			if ((offset + location) < fileContents.length()) {
 				occurrences++;
 			}
 		}
